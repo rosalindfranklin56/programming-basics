@@ -1,2 +1,2 @@
    # Programming Basics
-   My name is ... and I study ...
+   My name is Olha and I study bioinformatics
