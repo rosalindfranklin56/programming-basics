@@ -1,0 +1,30 @@
+1. How many sequences are in sequences.fasta?
+grep -c '>' sequences.fasta
+6
+
+2. Save all headers into results/headers.txt
+grep '>' sequences.fasta > /Users/merndrs/kse/programming-basics/results/headers.txt
+3.How many lines are not headers? Why is it more than question 1?
+grep -c -v ">" sequences.fasta 
+10, because some longer sequences occupy more than 1 line
+
+4. How many sequences come from Homo sapiens?
+grep -c "Homo sapiens" sequences.fasta 
+0
+
+5.Show the first 2 headers only (use a pipe)
+grep ">" sequences.fasta | head -n 2 
+>seq1 Mockus exemplaris gene A, partial
+>seq2 Mockus exemplaris gene B, comple
+
+6. Which gene names appear? 
+grep ">" sequences.fasta | cut -d " " -f 4,5 
+gene A,
+gene B,
+16S rRNA,
+hypothetical protein,
+with ambiguous
+gene C,
+
+7.Save the RNA version of the file into results/sequences_rna.fasta
+sed 's/T/U/g' sequences.fasta > /c/KSE/programming_term_1/programming-basics/results/sequences_rna.fasta
