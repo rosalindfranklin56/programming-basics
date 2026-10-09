@@ -1,0 +1,3 @@
+Hello!
+I`m Olha and I`m learning bioinformatics
+Now I`m working with the terminal
