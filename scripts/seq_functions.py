@@ -37,3 +37,13 @@ def first_atg(seq):
 
 for seq in sequences:
     print(first_atg(seq))
+
+counts = {}
+
+def count_bases(seq):
+    for base in seq:
+        counts[base] = counts.get(base, 0) + 1
+    return counts
+
+for seq in sequences:
+    print(counts(seq))
